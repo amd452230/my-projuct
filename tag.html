@@ -1,0 +1,836 @@
+<!DOCTYPE html> 
+    <html lang="en">
+       <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <meta name="Description"content="Free html tutorial">
+          <meta name="Keywords"content="html,HTML">
+          <!-- font-awesome -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+          <!-- Top img -->
+          <link rel="shortcut icon" href="img/mark-word-icon.png" type="image/x-icon">
+        <title>My html file.html </title>  
+
+    <style>
+    /* common code */
+* {
+    box-sizing: border-box;
+}
+body {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100vh;
+  margin: 0; 
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 20px; 
+}
+    html {
+    font-size: 16px;
+}
+  #copy{
+color:#6f7988;
+}
+  p i {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+  .name{
+  color: #f042a8ce;
+  font-size: 1rem;
+}
+  sup,sub{
+  color: #000000;
+  font-size: 1.1rem ;
+}
+  u{
+    color: #0a0a23;
+    font-weight: bolder;
+    text-decoration:line-through underline;
+    font-size: 1.2rem;
+}
+  details[open] summary{
+    background-color:red;
+}
+  summary{
+    background-color: #96D4D4;
+}
+pre{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    font-size: 1.5rem;
+}
+  .html-all{
+   list-style: none;
+    font-weight: bolder;
+}
+  dl{
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+  dt{
+    color: pink;
+    font: 1.4em sans-serif;
+    text-shadow: 2px 2px #c05858;
+}
+  dd{
+    color: plum;
+    font: 1.3em sans-serif;
+    text-shadow: 2px 2px #40cbe1;
+}
+  address{
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 5px red;
+}
+  #code{
+    color: #f49696;
+    font-style: italic;
+    font-weight: 900;
+    text-align: center;
+}
+  .ol-list{
+    justify-content: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #04d6e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-style: inherit;
+    list-style:none;
+    background-color: #1b1b1b;
+    display: flex;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+  .ol-list li {
+    margin-right: 20px;
+}
+  i{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+  marquee{
+    color: #87254e8a;
+    font-style: inherit;
+    font-weight: bolder;
+    text-shadow: -3px -5px 5px #4532f1, 3px 4px 6px rgb(245, 62, 113);
+    font-size: 2rem;
+    margin-top: -5px;  
+}
+  /* common code */
+
+  /* header top start here */
+  header {
+    width: 100%;
+    height: 60px;
+    background-color: #1b1b32;
+    display: flex;
+    color: white;
+}
+  #logo {
+    width: max(100px, 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 34 / 4;
+    padding: 0.6rem;
+}
+  h1 {
+    color: #f1be32;
+    font-size: min(6vw, 1.4em);
+}
+  nav {
+    width: 60%;
+    max-width: 300px;
+    height: 60px;
+}
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+  ul li {
+    color: #96D4D4;
+    list-style-type: none;
+} 
+/* ======== */ 
+  .label {
+    border: 2px solid rgb(0, 0, 0);
+    width: 380px;
+    height: 80%;
+    margin: 10px auto;
+    padding: 0 7px;
+    color: white;
+    background-color: #0a0a23;
+}  
+  header h2 {
+    text-align: center;
+    margin: -10px 0;
+    letter-spacing: 0.15px
+} 
+  p {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}  
+  .divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+  .bold {
+    font-weight: 800;
+}
+  .large {
+    height: 10px;
+}
+  .large, .medium {
+    background-color: #a0a0a0;
+    border: 0;
+}
+  .medium {
+    height: 5px;
+}
+  .small-text {
+    font-size: 0.85rem;
+}   
+  .calories-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+} 
+  .calories-info h2 {
+    margin: 0;
+} 
+  .left-container p {
+    margin: 5px 2px;
+    font-size: 2em;
+    font-weight: 700;
+} 
+  .calories-info span {
+    margin: -7px -2px;
+    font-size: 2.4em;
+    font-weight: 700;
+}
+  .right {
+    justify-content: flex-end;
+}
+  .indent {
+    margin-left: 1em;
+}
+.double-indent {
+    margin-left: 2em;
+} 
+  .daily-value p:not(.no-divider) {
+    border-bottom: 1px solid #888989;
+}
+  .note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding:0 8px;
+    text-indent:-8px;
+}
+/* <!-- img starts here --> */
+
+.header {
+  
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 5px;
+}
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+/* <!-- img starts here --> */
+
+/* CSS Color Markers start here */
+h2 {
+  text-align: center;
+}
+.container {
+  background-color: rgb(0, 208, 255);
+  padding: 10px 0;
+  margin: 10px;
+}
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
+.cap {
+  width: 60px;
+  height: 25px;
+}
+.sleeve {
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+.cap, .sleeve {
+  display: inline-block;
+}
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+/* CSS Color Markers ends here  */
+
+ h1 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding: 10px;
+}
+  h2 {
+    font-size: 30px;
+}
+  .established {
+    font-style: italic;
+} 
+  h1, h2, p {
+    text-align: center;
+}
+  .menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 500px;
+}
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+} 
+  hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+} 
+  .bottom-line {
+    margin-top: 25px;
+} 
+  h1, h2 {
+    font-family: Impact, serif;
+}  
+  .item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}  
+  .flavor, .dessert {
+    text-align: left;
+    width: 73%;
+}  
+  .price {
+    text-align: right;
+    /* width: 20%; */
+}  
+  footer {
+    font-size: 14px;
+}  
+  .address {
+    margin-bottom: 5px;
+} 
+  a {
+    color: black;
+} 
+  a:visited {
+    color: rgb(101, 61, 61);
+}  
+  a:hover {
+    color: brown;
+} 
+  a:active {
+    color: rgb(251, 92, 92);
+}
+/* ----form start here---- */
+.pera-header{
+  margin:auto;
+  text-align: center;
+}
+.eaque{
+    background-color: #1b1b32;  
+  color: #f5f6f7;  
+}
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em; 
+}
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+fieldset:last-of-type {
+  border-bottom: none;
+}
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+input[type="file"] {
+  padding: 1px 2px;
+}
+.inline{
+  display: inline; 
+}
+/* ----form ends here---- */
+
+/* table start here */
+table {
+  color:black;
+  text-align:center;
+  font-size:160%;
+  font-family:verdana,arial;
+  border-collapse: collapse; 
+  height:400px; 
+  width:380px;
+  border-style: dotted;
+  margin: auto;
+}
+table, tr, th, td {
+    border:1px solid black;
+    border-style:dotted;
+}
+.device, th{
+    background-color: #96D4D4;
+}
+.center{
+  margin: auto;
+  text-align: center;
+  background-color: #a0a0a0;
+}
+.color{
+  color: #ff898f;
+  text-align:center ;
+}
+/* table start here */
+#color-p{
+  text-align: center;
+}
+
+/* footer area start here */
+.last-footer{
+  background-color: #1b1b32;
+  color: white;
+  text-align: center;
+}
+.col-lg-6{   
+    text-align: center;
+}
+.social-menus{
+    font-size: 1.5rem;    
+}
+.icon-style{
+    color: white;
+}
+.social-menus :hover{
+    color: rgb(255, 60, 96);
+}
+/* footer area ends here */
+
+/* ==========================-style css-========================== */
+</style>
+    </head>
+    <body>
+
+      <header>
+        <img id="" src="img/arman.jpg">
+        <h1>HTML/CSS Quiz</h1>
+        <nav>
+          <ul>
+            <li><a href="#student-info">INFO</a></li>
+            <li><a href="#html-questions">HTML</a></li>
+            <li><a href="#css-questions">CSS</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- CSS Color Markers start here -->
+        <h1>CSS Color Markers</h1>
+    <div class="container">
+      <div class="marker red">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+      <div class="marker green">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+      <div class="marker blue">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+    </div>
+    <!-- CSS Color Markers ends here -->
+    <marquee>CSS flexbox photo gallery</marquee>
+    <!-- img starts here -->  
+    <header class="header">
+        <h2>css flexbox photo gallery</h2>
+      </header>
+      <div class="gallery">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="1">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg" alt="2">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg" alt="3">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg" alt="4">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg" alt="5">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg" alt="6">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg" alt="7">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg" alt="8">
+        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg" alt="9">
+      </div>
+    <!-- img ends here --> 
+
+        <p><i>Log Mathematics</i></p>
+    <div class="name">
+        (a+b)<sup>2</sup>=a<sup>2</sup>2ab+b<sup>2</sup> <br>
+        log10=log<sub>10</sub>10 <br>
+        Let log<sub>10</sub>10=x <br>
+        =>10<sup>x</sup>=10 <br>
+        =>10 <sup>x</sup>=10 <sup>1</sup> <br>
+        =>x=1 <br>
+        =>log10=1 <u>ans</u><br>
+    </div>
+
+    <div id="Clear-div">
+
+    </div>  
+    
+    <!-- ======= -->
+  <div class="label" id="Nutrition-Facts">
+    <header>
+      <h2 class="bold">Nutrition Facts</h2>
+      <div class="divider"></div>
+      <p>8 servings per container</p>
+      <p class="bold">Serving size <span>2/3 cup (55g)</span></p>
+    </header>
+    <div class="divider large"></div>
+    <div class="calories-info">
+      <div class="left-container">
+        <h2 class="bold small-text">Amount per serving</h2>
+        <p>Calories</p>
+      </div>
+      <span>230</span>
+    </div>
+    <div class="divider medium"></div>
+    <div class="daily-value small-text">
+      <p class="bold right no-divider">% Daily Value *</p>
+      <div class="divider"></div>
+      <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
+      <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
+      <div class="divider"></div>
+      <p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
+      <div class="divider"></div>
+      <p><span><span class="bold">Cholesterol</span> 0mg</span> <span class="bold">0%</span></p>
+      <p><span><span class="bold">Sodium</span> 160mg</span> <span class="bold">7%</span></p>
+      <p><span><span class="bold">Total Carbohydrate</span> 37g</span> <span class="bold">13%</span></p>
+      <p class="indent no-divider">Dietary Fiber 4g</p>
+      <div class="divider"></div>
+      <p class="indent no-divider">Total Sugars 12g</p>
+      <div class="divider double-indent"></div>
+      <p class="double-indent no-divider">Includes 10g Added Sugars <span class="bold">20%</span></p>
+      <div class="divider"></div>
+      <p class="no-divider"><span class="bold">Protein</span> 3g</p>
+      <div class="divider large"></div>
+      <p>Vitamin D 2mcg <span>10%</span></p>
+      <p>Calcium 260mg <span>20%</span></p>
+      <p>Iron 8mg <span>45%</span></p>
+      <p class="no-divider">Potassium 235mg <span>6%</span></p>
+    </div>
+    <div class="divider medium"></div>
+    <p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily
+      diet. 2,000 calories a day is used for general nutrition advice.</p>
+  </div>
+  <!-- ======= -->
+  <pre> 
+    consectetur        
+          veritatis 
+    voluptatem ipsam
+          piece classical          
+    debitis. 
+  </pre>
+<ol class="html-all">  
+     <li><i class="far fa-check-circle"></i>HTML<progress class="progress-ol" min="0"max="100"value="70"></progress></li>
+      <li><i class="far fa-check-circle"></i>CSS<progress class="progress-ol" min="0"max="100"value="50"></progress></li> 
+      <li><i class="far fa-check-circle"></i>JS<progress class="progress-ol" min="0"max="100"value="2"></progress></li> 
+     
+</ol>
+       
+        <dl>
+            <dt>Lorem ipsum dolor,</dt>
+                     <dd>- sit amet </dd>
+            <dt>consectetur </dt>
+                     <dd>- adipisicing elit.</dd>
+        </dl>
+
+        <!-- summary start here -->
+    <details>
+        <summary>summary Here</summary>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, provident facilis dolores et a molestias minima aliquam quidem saepe quod.</p>
+    </details> <br>
+       <!-- summary start ends --> 
+
+       <!-- comon tag start here --> 
+        <address> Bashundhara_ <br>
+            rud: 6 <br>
+            block: E <br>
+            tenement: 6 <br>
+            felat: B4 <br>
+        </address>
+
+        <p id="code">.……Html and css code…….</p>
+
+        <ol class="ol-list">
+          <i class="far fa-check-circle"></i>
+         <li><abbr title="Hypertext markup language">html</abbr></li>
+         <i class="far fa-check-circle"></i>
+         <li><abbr title="Cascading style sheets">CSS</abbr> </li>
+         <i class="far fa-check-circle"></i>
+         <li><abbr title="JavaScript">JS</abbr></li>
+         <i class="far fa-check-circle"></i>
+         <li><abbr title="New year">2024</abbr></li>
+        </ol>
+        
+    <p id="copy">&copy;Copyright </p> 
+   <!-- unique code to the html table -->
+<div class="center">
+    <header>
+      <h2 class="color">HTML Table</h2>
+    </header>
+  <main>   
+    <table>
+        <caption id="table">
+            PASCHIM POA AZIZIA ALIM MADRASH RESULT OF DAKHIL EXAMINATION, 2023
+        </caption>
+      <thead>    
+          <tr>
+             <th colspan="3">Percentage of Pass:96.36</th>
+          </tr>
+
+          <tr>
+             <th class="device">Roll</th>
+             <th>Name</th>
+             <th>GPA</th>
+          </tr>
+      </thead>
+
+      <tbody> 
+          <tr>
+             <td>272499</td>
+             <td>Nusaiba</td>
+             <td rowspan="2">5.00</td>
+          </tr>
+
+          <tr>
+             <td>272508</td>
+             <td>Samiya</td>
+          </tr>
+  
+          <tr>
+             <td>272530</td>
+             <td>Arman</td>
+             <td>3.75</td>
+          </tr>
+      </tbody>
+
+      <tfoot>  
+          <tr>
+             <td>272527</td>
+             <td>Sakib</td>
+             <td>F1</td>             
+          </tr> 
+      </tfoot> 
+    </table>
+  </main>
+</div>
+<!-- table ends here -->
+
+ <!-- ......form starts here......  -->
+ <fieldset class="eaque" id="form-id">
+    <legend style="color: #f84141; ">
+        Personalia:
+    </legend>
+ <h2 class="pera-header">Registration Form</h2>
+    <p class="pera-header">Please fill out this form with the required information</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+</fieldset> 
+<!-- ......form ends here...... -->
+
+ <!-- CAMPER CAFE  -->
+ <div class="menu">
+  <main>
+    <h2>CAMPER CAFE</h2>
+    <p class="established">Est. 2020</p>
+    <hr>
+    <section>
+      <h2>Coffee</h2>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
+      <article class="item">
+        <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Mocha</p><p class="price">4.50</p>
+      </article>
+    </section>
+    <section>
+      <h2>Desserts</h2>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+      <article class="item">
+        <p class="dessert">Donut</p><p class="price">1.50</p>
+      </article>
+      <article class="item">
+        <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+      </article>
+      <article class="item">
+        <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+      </article>
+      <article class="item">
+        <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+      </article>
+    </section>
+  </main>
+  <hr class="bottom-line">
+  <footer>
+    <p>
+      <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+    </p>
+    <p class="address">123 Free Code Camp Drive</p>
+  </footer>
+</div>
+<!-- CAMPER CAFE -->
+    <br>
+    <footer class="last-footer">
+      <div>
+        <h2>Losers always complain</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nobis repellendus voluptatem ullam. Ipsa,
+           nulla molestias iste, aliquam consequatur corporis sapiente molestiae quaerat amet, autem rerum inventore voluptatem cupiditate delectus?</p>
+     </div>   
+    
+    <div>
+        <div class="col-lg-6">
+            <div class="social-menus">
+                <a href="https://www.facebook.com/"><i class="icon-style fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com"><i class="icon-style fab fa-youtube"></i></a>
+                <a href="https://twitter.com/?lang=en"><i class="icon-style fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="icon-style fab fa-instagram"></i></a>
+
+            </div>
+        </div>
+        <p id="color-p">Copyright&copy;2024 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    </footer>
+  </body> 
+
+</html>
